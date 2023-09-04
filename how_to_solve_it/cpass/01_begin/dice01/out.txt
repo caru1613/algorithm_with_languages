@@ -1,0 +1,648 @@
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+1:1
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+2:2
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+3:3
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+4:4
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+5:5
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated
+top: 3
+6:6
+duplicated

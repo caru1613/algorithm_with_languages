@@ -1,0 +1,231 @@
+/// *** user.cpp ***
+#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+#include <cstdio>
+#include <vector>
+#include <queue>
+#include <algorithm>
+#include <unordered_map>
+
+using namespace std;
+
+// 판매내역
+using pii = pair<int, int>;
+
+const int PLM = 605;
+const int BLM = 30005;
+
+int prodSum[PLM];
+
+struct Product {
+    int Bid, Pid, price, num, snum; // 구입 id, 상품 id, 가격, 구입 수, 재고 수,
+    int cancel(int pid)
+    {
+        if (num != snum)
+            return -1;
+        prodSum[pid] -= num;
+        snum = 0;
+        return prodSum[pid];
+    }
+}prod[BLM];
+
+struct Comp {
+    bool operator()(const int a, const int b) const
+    {
+        if (prod[a].price != prod[b].price)
+            return prod[a].price > prod[b].price;
+        return prod[a].Bid > prod[b].Bid; 
+    }
+};
+
+priority_queue<int, vector<int>, Comp> pq[PLM]; //pid를 우선순위에 맞게 관리[]
+unordered_map<int, int> bHash, pHash; // 구입 번호, 제품 번호 renumberring id를 위한 hash table.
+
+int bCnt, pCnt;                       // 구입 번호, 제품번호 renumbering id
+unordered_map<int, vector<pii>> sTab; // SID를 키로 판매 내역을 vector<pii>에 저장.
+
+/*  No products */
+void init() 
+{
+    for (int i = 0; i < PLM; ++i)
+    {
+        pq[i] = {};
+        prodSum[i] = 0;
+    }
+
+    bCnt = pCnt = 0;
+
+    bHash.clear();
+    pHash.clear();
+    sTab.clear();
+}
+
+
+/* It buys products */
+int buy(int BID, int product, int price, int quantity)
+{
+    int bid = bHash.count(BID) ? bHash[BID] : bHash[BID] = ++ bCnt;
+    int pid = pHash.count(product) ? pHash[product] : pHash[product] = ++pCnt;
+    prod[bid] = { BID, product, price, quantity, quantity };
+    pq[pid].push(bid);
+    prodSum[pid] += quantity;
+
+    return prodSum[pid];
+}
+
+/* It cancels to buy products. */
+int cancel(int BID)
+{
+    if (bHash.count(BID) == 0)
+        return -1;
+    int bid = bHash[BID];
+    int pid = pHash[prod[bid].Pid];
+
+    return prod[bid].cancel(pid);;
+}
+
+
+/* It sells products. */
+int sell(int SID, int product, int price, int quantity) {
+    if (pHash.count(product) == 0)
+        return -1;
+
+    int pid = pHash[product];
+
+    if(prodSum[pid] < quantity)
+        return -1;
+
+    int res = 0;
+
+    while (!pq[pid].empty() && quantity)
+    {
+        int bid = pq[pid].top();
+        if (prod[bid].snum == 0)
+        {
+            pq[pid].pop();
+            continue;
+        }
+
+        int minNum = min(prod[bid].snum, quantity);
+        prod[bid].snum -= minNum;
+        quantity -= minNum;
+        prodSum[pid] -= minNum;
+
+        res += (price - prod[bid].price) * minNum;
+        sTab[SID].push_back({bid, minNum});
+    }
+
+    return res;
+}
+
+
+/* it refunds products. */
+int refund(int SID) 
+{
+    if (sTab.count(SID) == 0)
+        return -1;
+    int res = 0;
+
+    for (auto &p : sTab[SID])
+    {
+        int bid = p.first;
+        int snum = p.second;
+        int pid = pHash[prod[bid].Pid];
+
+        if (prod[bid].snum == 0)
+            pq[pid].push(bid);
+
+        prod[bid].snum += snum;
+        res += snum;
+        prodSum[pid] += snum;
+    }
+
+    sTab.erase(SID);
+    return 0;
+}
+ 
+ 
+/// *** main.cpp ***
+ 
+//#include <stdio.h>
+ 
+////////////////////////////////////////////////////////////////////////
+extern void init();
+extern int buy(int BID, int product, int price, int quantity);
+extern int cancel(int BID);
+extern int sell(int SID, int product, int price, int quantity);
+extern int refund(int SID);
+/////////////////////////////////////////////////////////////////////////
+ 
+#define CMD_INIT 1
+#define CMD_BUY 2
+#define CMD_CANCEL 3
+#define CMD_SELL 4
+#define CMD_REFUND 5
+ 
+static bool run() {
+    int q;
+    scanf("%d", &q);
+ 
+    int id, product, price, quantity;
+    int cmd, ans, ret = 0;
+    bool okay = false;
+ 
+    for (int i = 0; i < q; ++i) {
+        scanf("%d", &cmd);
+        switch (cmd) {
+        case CMD_INIT:
+            init();
+            okay = true;
+            break;
+        case CMD_BUY:
+            scanf("%d %d %d %d %d", &id, &product, &price, &quantity, &ans);
+            ret = buy(id, product, price, quantity);
+            if (ans != ret)
+                okay = false;
+            break;
+        case CMD_CANCEL:
+            scanf("%d %d", &id, &ans);
+            ret = cancel(id);
+            if (ans != ret)
+                okay = false;
+            break;
+        case CMD_SELL:
+            scanf("%d %d %d %d %d", &id, &product, &price, &quantity, &ans);
+            ret = sell(id, product, price, quantity);
+            if (ans != ret)
+                okay = false;
+            break;
+        case CMD_REFUND:
+            scanf("%d %d", &id, &ans);
+            ret = refund(id);
+            if (ans != ret)
+                okay = false;
+            break;
+        default:
+            okay = false;
+            break;
+        }
+    }
+    return okay;
+}
+ 
+int main() {
+    setbuf(stdout, NULL);
+    freopen("input.txt", "r", stdin);
+ 
+    int T, MARK;
+    scanf("%d %d", &T, &MARK);
+ 
+    for (int tc = 1; tc <= T; tc++) {
+        int score = run() ? MARK : 0;
+        printf("#%d %d\n", tc, score);
+    }
+ 
+    return 0;
+}
+
+
+
