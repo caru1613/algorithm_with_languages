@@ -145,7 +145,7 @@ void Maze::TurnLeft(int direction)
     return;
 }
 
-void Maze::TurnRight(int direction);
+void Maze::TurnRight(int direction)
 {
     return;
 }
