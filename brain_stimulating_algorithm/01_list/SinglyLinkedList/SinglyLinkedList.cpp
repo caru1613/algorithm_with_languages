@@ -40,6 +40,11 @@ int SinglyLinkedList::GetNodeCount(void)
     return NodeCount;
 }
 
+SinglyLinkedList::SinglyLinkedList(void)
+{
+    Head = NULL;
+}
+
 #if 0
 int main(void)
 {

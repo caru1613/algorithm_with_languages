@@ -27,6 +27,8 @@ class SinglyLinkedList
         void RemoveNode(Node* RemoveNode);
         Node* GetNodeAt(int Location);
         int GetNodeCount(void);
+
+        SinglyLinkedList();
 };
 
 #endif

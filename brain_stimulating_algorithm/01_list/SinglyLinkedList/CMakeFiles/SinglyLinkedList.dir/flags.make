@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+CXX_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -Wall -Werror
 
-CXX_FLAGS =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+CXX_FLAGS =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -Wall -Werror
 
