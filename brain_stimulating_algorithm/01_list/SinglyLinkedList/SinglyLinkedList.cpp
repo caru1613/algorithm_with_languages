@@ -1,50 +1,49 @@
-// Created on iPad.
-
-#include <iostream>
 #include "SinglyLinkedList.h"
 
-Node* SinglyLinkedList::CreateNode()
+Node* SinglyLinkedList::CreateNode(ElementType NewData)
 {
     return NULL;
 }
 
-void SinglyLinkedList::DestroyNode()
+void SinglyLinkedList::DestroyNode(Node* Node)
 {
     return;
 }
 
-void SinglyLinkedList::AppendNode()
+void SinglyLinkedList::AppendNode(Node* NewNode)
 {
     return;
 }
 
-void SinglyLinkedList::InsertAfter()
+void SinglyLinkedList::InsertAfter(Node* Current, Node* NewNode)
 {
     return;
 }
 
-void SinglyLinkedList::InsertNewHead()
+void SinglyLinkedList::InsertNewHead(Node* NewHead)
 {
     return;
 }
 
-void SinglyLinkedList::RemoveNode()
+void SinglyLinkedList::RemoveNode(Node* RemoveNode)
 {
     return;
 }
 
-Node* SinglyLinkedList::GetNodeAt()
+Node* SinglyLinkedList::GetNodeAt(int Location)
 {
     return NULL;
 }
 
-int SinglyLinkedList::GetNodeCount()
+int SinglyLinkedList::GetNodeCount(void)
 {
-    return NULL;
+    return NodeCount;
 }
 
-int main()
+#if 0
+int main(void)
 {
     cout << "Hello world!" << endl;
     return 0;
 }
+#endif

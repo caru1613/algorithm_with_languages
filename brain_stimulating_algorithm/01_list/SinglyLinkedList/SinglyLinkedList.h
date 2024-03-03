@@ -14,17 +14,19 @@ typedef struct tagNode
 
 class SinglyLinkedList
 {
-    public:
-
     private:
-        Node* CreateNode();
-        void DestroyNode();
-        void AppendNode();
-        void InsertAfter();
-        void InsertNewHead();
-        void RemoveNode();
-        Node* GetNodeAt();
-        int GetNodeCount();
+        Node *Head;
+        unsigned int NodeCount;
+        
+    public:
+        Node* CreateNode(ElementType NewData);
+        void DestroyNode(Node* Node);
+        void AppendNode(Node* NewNode);
+        void InsertAfter(Node* Current, Node* NewNode);
+        void InsertNewHead(Node* NewHead);
+        void RemoveNode(Node* RemoveNode);
+        Node* GetNodeAt(int Location);
+        int GetNodeCount(void);
 };
 
 #endif
