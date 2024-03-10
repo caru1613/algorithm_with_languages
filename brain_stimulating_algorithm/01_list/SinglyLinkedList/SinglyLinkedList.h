@@ -16,6 +16,7 @@ class SinglyLinkedList
 {
     private:
         Node *Head;
+        Node *Current;
         unsigned int NodeCount;
         
     public:
@@ -27,6 +28,7 @@ class SinglyLinkedList
         void RemoveNode(Node* RemoveNode);
         Node* GetNodeAt(int Location);
         int GetNodeCount(void);
+        void PrintNode(void);
 
         SinglyLinkedList();
 };
