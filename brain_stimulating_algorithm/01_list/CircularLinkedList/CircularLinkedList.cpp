@@ -95,6 +95,7 @@ void CircularLinkedList::RemoveNode(Node* Remove)
         if (Current != NULL)
         {
             Current->NextNode = Remove->NextNode;
+            Remove->NextNode->PrevNode = Current;
         }
     }
 }
