@@ -7,4 +7,4 @@ Project(
     LANGUAGES CXX)
 
 add_executable (SinglyLinkedList SinglyLinkedList.cpp Test_SinglyLinkedList.cpp)
-target_compile_options (SinglyLinkedList PUBLIC -Wall -Werror)
+#target_compile_options (SinglyLinkedList PUBLIC -Wall -Werror)

@@ -7,19 +7,23 @@ Node* SinglyLinkedList::CreateNode(ElementType NewData)
     NewNode->Data = NewData;
     NewNode->NextNode = NULL;
 
+    cout << __func__ << " " << NewNode << " " << NewNode->Data << endl;
     return NewNode;
 }
 
 void SinglyLinkedList::DestroyNode(Node* Node)
 {
-    delete Node;
+    cout << __func__ << " " << Node << endl;
+
+    if (Node != NULL)
+    {
+        delete Node;
+    }
 }
 
 void SinglyLinkedList::AppendNode(Node* NewNode)
 {
-    cout << "Before assign NewNode to HEAD " << endl;
-    cout << Head << endl;
-    cout << NewNode << endl;
+    cout << __func__ << " " <<NewNode << " " << NewNode->Data << endl;
 
     if ( Head == NULL)
     {
@@ -37,15 +41,13 @@ void SinglyLinkedList::AppendNode(Node* NewNode)
         Tail->NextNode = NewNode;
     }
 
-    cout << "After assign NewNode to HEAD " << endl;
-    cout << Head << endl;
-    cout << NewNode << endl;
-
     return;
 }
 
 void SinglyLinkedList::InsertAfter(Node* Current, Node* NewNode)
 {
+    cout << __func__ << " " << Current << " " << NewNode << " " << NewNode->Data << endl;
+
     NewNode->NextNode = Current->NextNode;
     Current->NextNode = NewNode;
     return;
@@ -53,6 +55,8 @@ void SinglyLinkedList::InsertAfter(Node* Current, Node* NewNode)
 
 void SinglyLinkedList::InsertNewHead(Node* NewHead)
 {
+    cout << __func__ << " " << Head << " " << NewHead << endl;
+
     if (Head == NULL)
     {
         Head = NewHead;
@@ -67,6 +71,7 @@ void SinglyLinkedList::InsertNewHead(Node* NewHead)
 
 void SinglyLinkedList::RemoveNode(Node* Remove)
 {
+    cout << __func__ << " " <<Remove << endl;
     if (Head == Remove)
     {
         Head = Remove->NextNode;
@@ -86,24 +91,23 @@ void SinglyLinkedList::RemoveNode(Node* Remove)
     }
 }
 
-Node* SinglyLinkedList::GetNodeAt(int Location)
+Node* SinglyLinkedList::GetNodeAt(int location)
 {
     Node* Current = Head;
 
-    cout << __func__ << " Init " << Current <<  endl;
-
-    while (Current != NULL && (--Location) >= 0)
+    int loop = location;
+    while (Current != NULL && (--loop) >= 0)
     {
         Current = Current->NextNode;
-        cout << __func__ << " Loop " << Current <<  endl;
     }
 
-    cout << __func__ << " End " << Current <<  endl;
+    cout << __func__ << " " << location << " " << Current <<  endl;
     return Current;
 }
 
 int SinglyLinkedList::GetNodeCount(void)
 {
+    cout << __func__ << " " << NodeCount << endl;
     return NodeCount;
 }
 
@@ -111,6 +115,7 @@ void SinglyLinkedList::PrintNode(void)
 {
     Node* node;
 
+    cout << "Print Nodes in List" << endl;
     for (node = Head; node != NULL; node = node->NextNode)
     {
         cout << node << " " << node->Data << endl;
@@ -120,6 +125,7 @@ void SinglyLinkedList::PrintNode(void)
 
 SinglyLinkedList::SinglyLinkedList(void)
 {
+    cout << __func__ << " " << Head << endl;
     Head = NULL;
     NodeCount = 0;
 }
