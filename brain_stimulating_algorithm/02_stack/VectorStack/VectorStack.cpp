@@ -30,7 +30,14 @@ ElementType VectorStack::pop()
 {
     cout << __func__ << endl;
 
-    ElementType retNode = m_vectorNode[m_vectorNode.size()-1];
+    if (m_vectorNode.empty() )
+    {
+        cout << "No data in stack." << endl;
+        return 0;
+    }
+    //ElementType retNode = m_vectorNode[m_vectorNode.size()-1];
+    
+    ElementType retNode = m_vectorNode.back();
     m_vectorNode.pop_back();
 
     return retNode;
