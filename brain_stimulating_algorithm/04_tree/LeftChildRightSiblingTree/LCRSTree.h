@@ -3,12 +3,12 @@
 
 typedef char ElementType;
 
-typedef struct tagCLRSNode
+typedef struct tagLCRSNode
 {
     struct tagLCRSNode* leftChild;
     struct tagLCRSNode* rightSibling;
 
-    ElementType Data;
+    ElementType data;
 
 } LCRSNode;
 
@@ -19,9 +19,9 @@ class LCRSTree
         ~LCRSTree();
         LCRSNode* createNode(ElementType data);
         void destroyNode(LCRSNode* node);
-        void destroyTree();
-        void addChildNode(LCRSNode* parent, LCRSNode* node);
-        printTree();
+        void destroyTree(LCRSNode* root);
+        void addChildNode(LCRSNode* parent, LCRSNode* child);
+        void printTree(LCRSNode* node, int depth);
 
     private:
         LCRSNode* m_rootNode;
