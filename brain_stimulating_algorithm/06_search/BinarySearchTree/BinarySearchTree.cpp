@@ -74,6 +74,7 @@ BSTNode* BinarySearchTree::searchNode(BSTNode* tree, ElementType target)
 }
 
 /* Search minimum value in Tree */
+/* Note that minimun value is left leaf node */
 BSTNode* BinarySearchTree::searchMinNode(BSTNode* tree)
 {
     if (tree == NULL)
@@ -119,6 +120,7 @@ void BinarySearchTree::insertNode(BSTNode* tree, BSTNode* child)
     }
 }
 
+/* It didn't consider if parent is NULL. */
 BSTNode* BinarySearchTree::removeNode(BSTNode* tree, BSTNode* parent, ElementType target)
 {
     BSTNode* removed = NULL;
@@ -136,9 +138,10 @@ BSTNode* BinarySearchTree::removeNode(BSTNode* tree, BSTNode* parent, ElementTyp
     {
         removed = removeNode(tree->right, tree, target);
     }
-    else
+    else /* tree->data == target */
     {
         removed = tree;
+        /* No children */
         if (tree->left == NULL && tree->right == NULL)
         {
            if (parent->left == tree)
@@ -152,19 +155,23 @@ BSTNode* BinarySearchTree::removeNode(BSTNode* tree, BSTNode* parent, ElementTyp
         } 
         else
         {
+            /* Two chidren */
             if (tree->left != NULL && tree->right != NULL)
             {
                 BSTNode* minNode = searchMinNode(tree->right);
                 minNode = removeNode(tree, NULL, minNode->data);
                 tree->data = minNode->data;
             }
+            /* one child */
             else
             {
                 BSTNode* temp = NULL;
+                /* Only left child */
                 if (tree->left != NULL)
                 {
                     temp = tree->left;
                 }
+                /* Only right child */
                 else
                 {
                     temp = tree->right;
