@@ -3,37 +3,41 @@
 
 typedef int ElementType;
 
+typedef enum { RED, BLACK } Color;
+
 typedef struct tagRBTNode
 {
     struct tagRBTNode* parent;
     struct tagRBTNode* left;
     struct tagRBTNode* right;
 
-    enum { RED, BLACK } color;
-
-    ElementType Data;
+    ElementType data;
+    Color color;
 
 } RBTNode;
-
 
 class RedBlackTree
 {
     public:
         RedBlackTree();
         ~RedBlackTree();
-        void DestroyTree(RBTNode* tree);
-        RBTNode* CreateNode(ElementType newData);
-        void DestroyNodee(RBTNode* node);
-        RBTNode* SearchNode(RBTNode* tree, ElementType target);
-        RBTNode* SearchMinNode(RBTNode* tree);
-        void InsertNode(RBTNode** tree, RBTNode* newNode);
-        void InsertNodeHelper(RBTNode** tree, RBTNode* newNode);
-        RBTNode* RemoveNode(RBTNode** root, ElementType target);
-        void RebuildAfterInsert(RBTNode** tree, RBTNode* newNode);
-        void RebuildAfterRemove(RBTNode** root, RBTNode* x);
-        void PrintTree(RBTNode* node, int depth, int blackCount);
-        void RotateLeft(RBTNode** root, RBTNode* parent);
-        void RotateRight(RBTNode** root, RBTNode* parent);
+        void destroyTree(RBTNode* tree);
+        RBTNode* createNode(ElementType newData);
+        void destroyNode(RBTNode* node);
+        RBTNode* searchNode(RBTNode* tree, ElementType target);
+        RBTNode* searchMinNode(RBTNode* tree);
+        void insertNode(RBTNode** tree, RBTNode* newNode);
+        void insertNodeHelper(RBTNode** tree, RBTNode* newNode);
+        RBTNode* removeNode(RBTNode** root, ElementType target);
+        void rebuildAfterInsert(RBTNode** tree, RBTNode* newNode);
+        void rebuildAfterRemove(RBTNode** root, RBTNode* successor);
+        void printTree(RBTNode* node, int depth, int blackCount);
+        void rotateLeft(RBTNode** root, RBTNode* parent);
+        void rotateRight(RBTNode** root, RBTNode* parent);
+
+        RBTNode* getNil(void);
+    private:
+        RBTNode* Nil;
 };
 
 #endif
