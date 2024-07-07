@@ -106,6 +106,7 @@ void RedBlackTree::insertNodeHelper(RBTNode** tree, RBTNode* newNode)
     if ((*tree) == NULL)
     {
         (*tree) = newNode;
+        return ;
     }
 
     if ((*tree)->data < newNode->data)
@@ -127,10 +128,10 @@ void RedBlackTree::insertNodeHelper(RBTNode** tree, RBTNode* newNode)
             (*tree)->left = newNode;
             newNode->parent = (*tree);
         }
-    }
-    else
-    {
-        insertNodeHelper(&(*tree)->left, newNode);
+        else
+        {
+            insertNodeHelper(&(*tree)->left, newNode);
+        }
     }
 }
 
